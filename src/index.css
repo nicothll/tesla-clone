@@ -1,8 +1,97 @@
+@import url('https://fonts.googleapis.com/css2?family=Maven+Pro:wght@400;500;600;700&display=swap');
+
+* {
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+  color: black;
+  outline-offset: 2px;
+}
+
 body {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+  font-family: -apple-system, Maven Pro, 'Segoe UI', 'Roboto', 'Oxygen',
     'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  width: 100%;
+  overflow-x: hidden;
+}
+
+body, html, ol, ul {
+  margin: 0;
+  padding: 0;
+}
+
+li {
+  display: list-item;
+}
+
+ol, ul {
+  list-style-type: none;
+}
+
+a {
+  appearance: none;
+  color: inherit;
+  font-weight: inherit;
+  text-decoration: none;
+}
+
+div {
+  display: block;
+}
+
+h1 {
+  margin-block-start: 0.67rem;
+  margin-block-end: 0.67rem;
+  margin-inline-start: 0px;
+  margin-inline-end: 0px;
+  font-weight: bold;
+  font-size: 45px;
+}
+
+:root {
+  --tds-size: 8px;
+  --tds-size--half: 4px;
+  --tds-size--1x: 8px;
+  --tds-size--2x: 16px;
+  --tds-size--3x: 24px;
+  --tds-size--4x: 32px;
+  --tds-size--5x: 40px;
+  --tds-size--6x: 48px;
+  --tds-size--7x: 56px;
+  --tds-size--8x: 64px;
+  --tds-size--9x: 72px;
+  --tds-size--10x: 80px;
+  --tds-size--11x: 88px;
+  --tds-size--12x: 96px;
+  --tds-size--13x: 104px;
+  --tds-color--black: #000;
+  --tds-color--blue10: #2e4994;
+  --tds-color--blue20: #3457b1;
+  --tds-color--blue30: #3e6ae1;
+  --tds-color--green: #12bb00;
+  --tds-color--grey10: #171a20;
+  --tds-color--grey15: #222;
+  --tds-color--grey20: #393c41;
+  --tds-color--grey25: #444;
+  --tds-color--grey30: #5c5e62;
+  --tds-color--grey35: #8e8e8e;
+  --tds-color--grey40: #a2a3a5;
+  --tds-color--grey45: #bbb;
+  --tds-color--grey50: #d0d1d2;
+  --tds-color--grey60: #e2e3e3;
+  --tds-color--grey65: #eee;
+  --tds-color--grey70: #f4f4f4;
+  --tds-color--red10: #b74134;
+  --tds-color--red20: #ed4e3b;
+  --tds-color--white: #fff;
+  --tds-color--yellow: #fbb01b;
+  --transition-color: color 500ms ease;
+  --transition-background: background-color 500ms ease;
+}
+
+.App {
+  text-align: center;
 }
