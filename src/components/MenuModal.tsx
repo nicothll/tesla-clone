@@ -1,7 +1,7 @@
 import { AnimatePresence, motion } from 'framer-motion'
 import styled from 'styled-components'
 import { device } from '../settings/device'
-import { navMenuContent } from '../settings/menuContent';
+import { menuContent, navMenuContent, rightMenuContent } from '../settings/menuContent';
 import ListItems from './ListItems';
 import CloseIcon from '@mui/icons-material/Close';
 
@@ -10,7 +10,7 @@ const backdropVariants = {
     visible: {
       opacity: 1,
       transition: {
-        duration: 0.8 
+        duration: 0.4 
       }
     },
     exit: {
@@ -21,18 +21,18 @@ const backdropVariants = {
   
   const modalVariants = {
     hidden : {
-        x: "200vw",
-        opacity: 0,
+      x: "200vw",
+      opacity: 0,
     },
     visible: {
-        x: 0,
-        opacity: 1,
-        transition: { duration: 0.8 }
+      x: 0,
+      opacity: 1,
+      transition: { duration: 0.8 }
     },
     exit: {
       x: "200vw",
-        opacity: 0,
-        transition: { duration: 0.9 },
+      opacity: 0,
+      transition: { duration: 0.9 },
     }
   }
 
@@ -42,6 +42,14 @@ interface MenuModalConfig {
 }
 
 const MenuModal = ({ showMenu, action }: MenuModalConfig) => {
+  let navContent;
+  const tabletSize = true
+  if( showMenu && tabletSize ) {
+    navContent = [...menuContent, ...navMenuContent, ...rightMenuContent];
+  } else {
+    navContent = navMenuContent;
+  };
+
   return (
     <AnimatePresence>
         { showMenu && (
@@ -66,7 +74,7 @@ const MenuModal = ({ showMenu, action }: MenuModalConfig) => {
                 </MenuNavHeader>
                 <MenuNavSection>
                   <MenuNavList>
-                    <ListItems content={navMenuContent}/>
+                    <ListItems content={navContent}/>
                   </MenuNavList>
                 </MenuNavSection>
             </MenuNavDialog>
@@ -108,10 +116,7 @@ const MenuNavHeader = styled.div`
     display: flex;
     min-block-size: 80px;
     padding: 20px;
-    align-items: flex-start;
-    box-shadow: 0 -2px 0 0;
-    flex-direction: row-reverse;
-    justify-content: space-between;
+    justify-content: flex-end;
     position: sticky;
     top: 0;
     z-index: 10;

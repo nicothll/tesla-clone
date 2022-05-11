@@ -100,7 +100,7 @@ button {
   --tds-color--yellow: #fbb01b;
   --tds-bg-color-variant: rgba(0, 0, 0, 0.06);
   --transition-color: color .33s ease;
-  --transition: all 0.8s ease;
+  --transition: all 1s ease-out;
 }
 
 .App {

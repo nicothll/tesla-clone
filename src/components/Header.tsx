@@ -14,7 +14,7 @@ const Header = () => {
     <HeaderContainer>
         <Logo>
             <a href="#">
-                <img src="/images/logo.svg" alt="tesla-logo" />
+                <LogoImg src="/images/logo.svg" alt="tesla-logo" />
             </a>
         </Logo>
         <MenuList>
@@ -47,6 +47,11 @@ const Logo = styled.div`
     margin: 0;
     padding-left: var(--tds-size--4x);
     align-items: center;
+`
+
+const LogoImg = styled.img`
+    width: 120px;
+    height: 23px;
 `
 
 const MenuList = styled.ol`

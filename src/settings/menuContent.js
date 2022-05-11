@@ -57,15 +57,31 @@ export const menuContent = [
       link: '#'
     },
     {
-      name: 'Cybertruck',
+      name: 'Powerwall',
       link: '#'
     },
     {
-      name: 'Roadster',
+      name: 'Commercial Energy',
       link: '#'
     },
     {
-      name: 'Semi',
+      name: 'Utilities',
+      link: '#'
+    },
+    {
+      name: 'Charging',
+      link: '#'
+    },
+    {
+      name: 'Find Us',
+      link: '#'
+    },
+    {
+      name: 'Support',
+      link: '#'
+    },
+    {
+      name: 'Investor Relations',
       link: '#'
     },
   ]
