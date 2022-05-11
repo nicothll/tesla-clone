@@ -18,13 +18,18 @@ body {
   overflow-x: hidden;
 }
 
-body, html, ol, ul {
+body, html, ol, ul, li {
   margin: 0;
   padding: 0;
 }
 
 li {
   display: list-item;
+  line-height: 20px;
+}
+
+li, p {
+  max-inline-size: 75ch;
 }
 
 ol, ul {
@@ -38,7 +43,7 @@ a {
   text-decoration: none;
 }
 
-div {
+div, section {
   display: block;
 }
 
@@ -49,6 +54,11 @@ h1 {
   margin-inline-end: 0px;
   font-weight: bold;
   font-size: 45px;
+}
+
+button {
+  text-transform: none;
+  overflow: visible;
 }
 
 :root {
@@ -88,8 +98,9 @@ h1 {
   --tds-color--red20: #ed4e3b;
   --tds-color--white: #fff;
   --tds-color--yellow: #fbb01b;
-  --transition-color: color 500ms ease;
-  --transition-background: background-color 500ms ease;
+  --tds-bg-color-variant: rgba(0, 0, 0, 0.06);
+  --transition-color: color .33s ease;
+  --transition: all 0.8s ease;
 }
 
 .App {
