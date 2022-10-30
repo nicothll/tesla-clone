@@ -1,4 +1,5 @@
 import React from 'react'
+import { Link } from 'react-router-dom';
 import styled from 'styled-components';
 
 interface ListItemConfig {
@@ -13,11 +14,13 @@ interface contentObject {
 const ListItems = ({ content }: ListItemConfig) => {
 
     const items = content.map((c: contentObject) => (
-        <li key={c.name}>
-            <ItemLink href={c.link}>
-                <ItemSpan>{c.name}</ItemSpan>
-            </ItemLink>
-        </li>
+        <Link to={c.link}>
+            <li key={c.name}>
+                <ItemLink>
+                    <ItemSpan>{c.name}</ItemSpan>
+                </ItemLink>
+            </li>
+        </Link>
     ))
 
   return (

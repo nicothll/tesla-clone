@@ -37,7 +37,7 @@ interface SectionConfig {
     rightBtnText?: string;
 }
 
-const Section = (props: SectionConfig) => {
+const HomeSection = (props: SectionConfig) => {
 
     const control = useAnimation()
     const [ refView, inView ] = useInView({
@@ -93,7 +93,7 @@ const Section = (props: SectionConfig) => {
   )
 }
 
-export default Section
+export default HomeSection
 
 interface Props {
     backgroundImg: string;
@@ -124,6 +124,7 @@ const ButtonGroup = styled.div`
     font-weight: 600;
     letter-spacing: 1.1px;
     font-size: 12px;
+    transition: all 0.5s ease;
 
     @media ${device.mobile} {
         flex-direction: column;
@@ -157,6 +158,4 @@ background-color: white;
 color: black;
 opacity: 0.70;
 `
-const DownArrowWrap = styled.div`
-    margin-bottom: var(--tds-size--3x);
-`
+const DownArrowWrap = styled.div``

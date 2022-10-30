@@ -4,6 +4,7 @@ import { menuContent, rightMenuContent } from "../settings/menuContent"
 import { device } from "../settings/device"
 import MenuModal from "./MenuModal"
 import { useState } from "react"
+import { Link } from "react-router-dom"
 
 
 const Header = () => {
@@ -13,9 +14,9 @@ const Header = () => {
   return (
     <HeaderContainer>
         <Logo>
-            <a href="#">
+            <Link to='/'>
                 <LogoImg src="/images/logo.svg" alt="tesla-logo" />
-            </a>
+            </Link>
         </Logo>
         <MenuList>
             <ListItems content={menuContent} />

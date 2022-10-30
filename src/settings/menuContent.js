@@ -1,28 +1,28 @@
 export const menuContent = [
-    {
-      name: 'Model S',
-      link: '#'
-    },
-    {
-      name: 'Model 3',
-      link: '#'
-    },
-    {
-      name: 'Model X',
-      link: '#'
-    },
-    {
-      name: 'Model Y',
-      link: '#'
-    },
-    {
-      name: 'Solar Roof',
-      link: '#'
-    },
-    {
-      name: 'Solar Panels',
-      link: '#'
-    },
+  {
+    name: 'Model 3',
+    link: '/model3'
+  },
+  {
+    name: 'Model Y',
+    link: '/modely'
+  },
+  {
+    name: 'Model S',
+    link: '/models'
+  },
+  {
+    name: 'Model X',
+    link: '/modelx'
+  },
+  {
+    name: 'Solar Panels',
+    link: '/solarpanels'
+  },
+  {
+    name: 'Solar Roof',
+    link: '/solarroof'
+  },
   ]
 
   export const rightMenuContent = [
