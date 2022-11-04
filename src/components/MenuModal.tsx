@@ -44,6 +44,7 @@ interface MenuModalConfig {
 const MenuModal = ({ showMenu, action }: MenuModalConfig) => {
   let navContent;
   const tabletSize = true
+
   if( showMenu && tabletSize ) {
     navContent = [...menuContent, ...navMenuContent, ...rightMenuContent];
   } else {
@@ -66,6 +67,7 @@ const MenuModal = ({ showMenu, action }: MenuModalConfig) => {
                 initial="hidden"
                 animate="visible"
                 exit="exit"
+                id='menuModal'
               >
                 <MenuNavHeader>
                     <MenuButtonClose onClick={() => action(false)}>
@@ -155,12 +157,9 @@ const MenuNavList = styled.ol`
         margin-block-end: var(--tds-size--1x);
     }
 
-    & a {
+    & span {
         display: inline-flex;
         inline-size: 100%;
-    }
-
-    & span {
         flex-grow: 1;
         margin: 0 var(--tds-size--half);
         text-align: start;

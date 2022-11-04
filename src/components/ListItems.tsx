@@ -13,9 +13,9 @@ interface contentObject {
 
 const ListItems = ({ content }: ListItemConfig) => {
 
-    const items = content.map((c: contentObject) => (
+    const items = content.map((c: contentObject, index: Number) => (
         <Link to={c.link}>
-            <li key={c.name}>
+            <li key={c.name+index}>
                 <ItemLink>
                     <ItemSpan>{c.name}</ItemSpan>
                 </ItemLink>
@@ -35,7 +35,7 @@ const ItemSpan = styled.span`
     margin: 0 var(--tds-size--1x);
 `
 
-const ItemLink = styled.a`
+const ItemLink = styled.span`
     padding: var(--tds-size--half) var(--tds-size--1x);
     color: var(--tds-color--grey10);
     min-block-size: var(--tds-size--4x);

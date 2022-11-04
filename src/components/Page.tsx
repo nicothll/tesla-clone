@@ -63,7 +63,7 @@ const Page = (props: PageConfig) => {
                 <MetricsWrapper>{
                         props.information && (
                             props.information.map((info, index) => (
-                            <Info title={info.title} description={info.description}/>
+                            <Info key={index} title={info.title} description={info.description}/>
                             ))
                         )
                     }
