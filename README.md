@@ -11,5 +11,5 @@ docker pull nthll/tesla-clone:latest
 
 ### Run Docker container
 ```bash
-docker run --name tesla -d -p 3000:3000 tesla-clone:latest
+docker run --name tesla -d -p 3000:3000 nthll/tesla-clone:latest
 ```
