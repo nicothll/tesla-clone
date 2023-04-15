@@ -34,6 +34,10 @@ const Page = (props: PageConfig) => {
     })
 
     useEffect(() => {
+        document.title = `${props.title} | Tesla`
+    }, [props])
+ 
+    useEffect(() => {
         if (inView) {
             control.start("visible")
         } else {
@@ -104,10 +108,12 @@ const Title = styled.div`
 `
 const InformationGroup = styled.div`
     display: flex;
+    grid-gap: 24px 6px;
     margin-bottom: 46px;
     letter-spacing: 1.1px;
     font-size: 12px;
     align-items: center;
+    justify-items: center;
     font-weight: 500;
 
     @media ${device.tablet} {
@@ -118,8 +124,9 @@ const InformationGroup = styled.div`
 `
 const MetricsWrapper = styled.div`
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 1.3rem;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 1.5rem;
+    justify-items: center;
 `
 
 

@@ -1,7 +1,12 @@
+import { useEffect } from 'react'
 import styled from 'styled-components'
 import HomeSection from './HomeSection'
 
 const Home = () => {
+    useEffect(() => {
+        document.title = "Home | Tesla"
+    }, [])
+    
   return (
     <HomeContainer>
         <HomeSection
